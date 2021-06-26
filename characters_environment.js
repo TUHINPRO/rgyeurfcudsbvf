@@ -286,13 +286,13 @@ function autoControl(character){
 function manualControl(character){
   
   if(character.live){
-    if(keyDown(noseX<300)){
+    if(noseX<300){
       character.velocity.x-=gameConfig.moveSpeed;
       character.changeAnimation('move');
       character.mirrorX(-1);
     }
 
-    if(keyDown(noseX>300)){
+    if(noseX>300){
       character.velocity.x+=gameConfig.moveSpeed;
       character.changeAnimation('move');
       character.mirrorX(1);
